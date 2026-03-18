@@ -1,0 +1,76 @@
+SyriaTel Customer Churn Dataset: Comprehensive Feature Dictionary
+
+This document provides a detailed breakdown of the features (columns) present in the SyriaTel Customer Churn dataset. This dataset is widely used in predictive modeling to determine the likelihood of a customer canceling their telecommunications service (churning). 
+
+Understanding these features is critical for exploratory data analysis (EDA), feature engineering, and interpreting machine learning models.
+
+================================================================================
+SECTION 1: ACCOUNT & DEMOGRAPHIC INFORMATION
+================================================================================
+These features identify the customer and provide basic geographic and tenure information.
+
+* state: 
+  The US state where the customer resides, represented by a standard 2-letter abbreviation (e.g., 'KS' for Kansas, 'OH' for Ohio). Geography can sometimes play a role in churn if regional network coverage is poor or if local competitors offer better rates.
+
+* account length: 
+  An integer representing the number of days the customer has had an active account with the telecom company. This is a crucial metric for evaluating customer loyalty. Typically, newer customers might be more prone to churning if they are unsatisfied with the onboarding experience, whereas long-term customers might churn if they feel their loyalty is not rewarded.
+
+* area code: 
+  The 3-digit area code of the customer's phone number. Like 'state', this can be used to map regional trends in customer retention.
+
+* phone number: 
+  The customer's 7-digit phone number (formatted as XXX-XXXX). In the context of machine learning, this feature acts as a unique identifier (primary key) for each row and contains no predictive power. It should generally be dropped before training a model.
+
+================================================================================
+SECTION 2: PLAN DETAILS
+================================================================================
+These boolean and discrete features describe the specific services the customer has opted into.
+
+* international plan: 
+  A categorical/binary feature ('yes' or 'no') indicating whether the customer pays for a specialized international calling plan. Customers without this plan who make international calls are likely subject to much higher per-minute rates, which could trigger bill shock and subsequent churn.
+
+* voice mail plan: 
+  A categorical/binary feature ('yes' or 'no') indicating whether the customer pays for a voicemail service plan.
+
+* number vmail messages: 
+  An integer representing the average or current number of voicemail messages the customer has. For customers without a voice mail plan, this value is typically 0. This feature shows the level of engagement the customer has with their voicemail service.
+
+================================================================================
+SECTION 3: USAGE & BILLING METRICS
+================================================================================
+This dataset breaks down customer phone usage into four distinct time/type categories: Day, Evening (eve), Night, and International (intl). For each category, there are three associated metrics: Minutes, Calls, and Charge.
+
+DAY USAGE:
+* total day minutes: The total number of minutes the customer spent on calls during daytime hours.
+* total day calls: The total count of individual phone calls made or received during the day.
+* total day charge: The monetary amount billed to the customer for their daytime usage.
+
+EVENING USAGE:
+* total eve minutes: The total number of minutes the customer spent on calls during evening hours.
+* total eve calls: The total count of individual phone calls made or received during the evening.
+* total eve charge: The monetary amount billed to the customer for their evening usage.
+
+NIGHT USAGE:
+* total night minutes: The total number of minutes the customer spent on calls during nighttime hours.
+* total night calls: The total count of individual phone calls made or received during the night.
+* total night charge: The monetary amount billed to the customer for their nighttime usage.
+
+INTERNATIONAL USAGE:
+* total intl minutes: The total number of minutes the customer spent on international calls.
+* total intl calls: The total count of individual international phone calls made or received.
+* total intl charge: The monetary amount billed to the customer for international usage.
+
+Note on Billing: Analyzing the relationship between total charges and churn is vital. Customers who experience sudden spikes in their charges (bill shock) are highly susceptible to churning. Furthermore, comparing usage minutes to the total charge can help identify if a customer is on an inefficient pricing plan.
+
+================================================================================
+SECTION 4: CUSTOMER SATISFACTION & RETENTION
+================================================================================
+These features directly relate to the customer's friction with the company and their ultimate retention status.
+
+* customer service calls: 
+  An integer representing the number of times the customer has contacted the telecom's customer support line. This is historically one of the strongest predictors of churn. A high number of calls indicates the customer is experiencing ongoing issues (technical, billing, or otherwise) that are not being resolved to their satisfaction.
+
+* churn: 
+  This is the TARGET VARIABLE for predictive modeling. It is a boolean feature ('True' or 'False') indicating the final outcome of the customer's relationship with the telecom company.
+    - True  = The customer canceled their service (churned).
+    - False = The customer maintained their service (retained).
