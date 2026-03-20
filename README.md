@@ -9,8 +9,6 @@ SYRIATEL CHURN ANALYSIS
 
 > **Email**: ngundolarrymuithya@gmail.com
 
----
-
 <h2 align='center'>
 1. INTRODUCTION
 </h2>
@@ -34,8 +32,6 @@ The business objectives are:
 
 I will focus on two types of classifiers: **logistic regression models** and **decision trees**
 
----
-
 <h2 align='center'>
 2. DATA UNDERSTANDING
 </h2>
@@ -50,7 +46,7 @@ A descriptive definition of the columns is located [here](./Data/SyriaTel_Datase
 
 I discovered that the data contained no empty or duplicate values.
 
-I performed data cleaning and performed some visualization:
+I performed data cleaning and did some visualization:
 
 #### Churn Percentage by International Plan Status
 
@@ -114,8 +110,6 @@ I determined the best hyperparameters to use that improved the **recall** and ov
 
 I used these to build the **best decision tree model**.
 
----
-
 <h2 align='center'>
 4. MODEL SELECTION
 </h2>
@@ -128,13 +122,11 @@ I compared the **best logistic model** and the **best decision tree** to determi
 
 I determined that the **decision tree** was the **better** model.
 
----
-
 <h2 align='center'>
 5. CONCLUSION
 </h2>
 
-The better classification model to use is the `best_decision_tree`. It has better **recall** compared to the `best_logistic_model` and performs better in all other categories.
+The better classification model to use is the **best decision tree**. It has better **recall** compared to the **best logistic model** and performs better in all other categories.
 
 <h2 align='center'>
 6. RECOMMENDATIONS
@@ -152,8 +144,6 @@ Use the decision tree for **prediction** and the logistic regression model for *
 
 * Offer voice mail plans to more customers
 
----
-
 <h2 align='center'>
 7. NEXT STEPS
 </h2>
@@ -161,8 +151,6 @@ Use the decision tree for **prediction** and the logistic regression model for *
 * Perform **cross-validation** to see how the models perform using different training and test sets
 
 * Play around with combinations of other hyperparameters to see if they improve performance.
-
----
 
 <h2 align='center'>
 8. FOR MORE INFORMATION
