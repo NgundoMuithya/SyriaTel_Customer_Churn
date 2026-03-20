@@ -133,3 +133,39 @@ I determined that the **decision tree** was the **better** model.
 <h2 align='center'>
 5. CONCLUSION
 </h2>
+
+The better classification model to use is the `best_decision_tree`. It has better **recall** compared to the `best_logistic_model` and performs better in all other categories.
+
+<h2 align='center'>
+6. RECOMMENDATIONS
+</h2>
+
+### a) Model Recommendations
+
+Use the decision tree for **prediction** and the logistic regression model for **inference** 
+
+### b) Business Recommendations
+
+* Lower the price of an international plan
+
+* Streamline customer service operations
+
+* Offer voice mail plans to more customers
+
+---
+
+<h2 align='center'>
+7. NEXT STEPS
+</h2>
+
+* Perform **cross-validation** to see how the models perform using different training and test sets
+
+* Play around with combinations of other hyperparameters to see if they improve performance.
+
+---
+
+<h2 align='center'>
+8. FOR MORE INFORMATION
+</h2>
+
+For more information see the [Jupyter Notebook](./notebook.ipynb) and the [Presentation](./presentation.pdf)
