@@ -76,4 +76,60 @@ I built two logistic models: one **using class weights** and another **using SMO
 
 #### i) Using Class weights
 
-##### Recall scores for logistic models using different clas weights
+##### Recall scores for logistic models using different class weights
+
+<img src='./Images/Recall_Scores_for_Different_Weights.png'/>
+
+##### ROC Curves for logistic models using different class weights
+
+<img src='./Images/ROC_Curve.png'/>
+
+From this, I determined the best model was the one with a `class_weight` of **balanced**.
+
+#### ii) Using SMOTE
+
+I then used SMOTE on the training data to get oversampled training data that I used to train an **oversampled** model. I then compared the oversampled model to the balanced model.
+
+##### Balanced vs Oversampled Models
+
+<img src='./Images/Balanced_vs_Oversampled.png'/>
+
+I determined the **best logisitc model** of the two was the **balanced model**
+
+### b) Decision Tree
+
+I built a vanilla decision tree and did hyperparameter tuning and pruning to improve its performance.
+
+#### Hyperparameter Tuning and Pruning
+
+<img src='./Images/Performance_Metrics_Across_Hyperparam_Combs.png'/>
+
+I determined the best hyperparameters to use that improved the **recall** and overall performance of the decision tree model were:
+
+* `criterion`:  **gini**
+* `class_weight`:  **balanced**
+* `max_depth`: **5**
+* `min_samples_leaf`: **20**
+* `min_samples_split`: **75**
+
+I used these to build the **best decision tree model**.
+
+---
+
+<h2 align='center'>
+4. MODEL SELECTION
+</h2>
+
+I compared the **best logistic model** and the **best decision tree** to determine the **best overall model**.
+
+### Best Logistic Model vs Best Decision Tree
+
+<img src='./Images/Logreg_vs_Decision_Tree.png'/>
+
+I determined that the **decision tree** was the **better** model.
+
+---
+
+<h2 align='center'>
+5. CONCLUSION
+</h2>
