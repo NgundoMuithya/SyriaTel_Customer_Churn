@@ -90,7 +90,7 @@ I then used SMOTE on the training data to get oversampled training data that I u
 
 <img src='./Images/Balanced_vs_Oversampled.png'/>
 
-I determined the **best logisitc model** of the two was the **balanced model**
+I determined the **best logistic model** of the two was the **balanced model**
 
 ### b) Decision Tree
 
