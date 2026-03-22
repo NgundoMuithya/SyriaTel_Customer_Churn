@@ -36,7 +36,7 @@ I will focus on two types of classifiers: **logistic regression models** and **d
 2. DATA UNDERSTANDING
 </h2>
 
-I will use the publicly available data on churning provided by SyriaTel [here](./Data/syriatel_data.csv)
+I will use publicly available information on churning provided by SyriaTel [here](./Data/syriatel_data.csv)
 
 It contains various information about customers, including whether or not they will churn.
 
